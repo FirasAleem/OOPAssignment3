@@ -33,6 +33,8 @@ public class Mapping {
          * complete the vocabulary HashMap <Key, Value> with all directions.
          * use the directions.txt file and crosscheck with the ExpectedInput and ExpectedOutput files to find the keys and the values
          */
+        vocab.put("SW", "SW");
+        vocab.put("SOUTHWEST", "SW");
         vocab.put("Q", "Q");
         vocab.put("QUIT", "Q");
         vocab.put("U", "U");
@@ -53,8 +55,6 @@ public class Mapping {
         vocab.put("SOUTHEAST", "SE");
         vocab.put("NW", "NW");
         vocab.put("NORTHWEST", "NW");
-        vocab.put("SW", "SW");
-        vocab.put("SOUTHWEST", "SW");
     }
 
     public void mapping() {
@@ -68,7 +68,7 @@ public class Mapping {
          * initialize a location variable with the INITIAL_LOCATION
          */
         int location = INITIAL_LOCATION;
-        while (location != 0) { //originally was while(true)
+        while (location!=0) { //originally was while(true)
 
             /* TODO
              * get the location and print its description to both console and file
@@ -94,10 +94,11 @@ public class Mapping {
              */
             StringBuilder exitString = new StringBuilder();
             exitString.append("Available exits are ");
-            for (Object value : exits.values()) {
+            for (String value : exits.keySet()) {
                 exitString.append(value);
                 exitString.append(", ");
             }
+            exitString.append(System.lineSeparator());
             fileLogger.log(exitString.toString());
             consoleLogger.log(exitString.toString());
 
@@ -153,6 +154,7 @@ public class Mapping {
             }
 
         }
+        System.out.println(locationMap.get(0).getDescription());
     }
 
     public static void main(String[] args) {
@@ -162,6 +164,7 @@ public class Mapping {
          * start the game
          */
         Mapping mapping = new Mapping();
+        mapping.mapping();
     }
 
 }
