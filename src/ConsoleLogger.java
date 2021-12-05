@@ -4,6 +4,6 @@ public class ConsoleLogger implements Logger{
         /*
          * print message to console
          */
-        System.out.println(message);
+        System.out.print(message);
     }
 }

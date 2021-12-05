@@ -7,17 +7,18 @@ public class LocationMap implements Map<Integer, Location> {
     private static final String LOCATIONS_FILE_NAME =  "locations.txt";
     private static final String DIRECTIONS_FILE_NAME =  "directions.txt";
 
-    /* TODO
+    /*
      * create a static locations HashMap
      */
-    public static HashMap<Integer, Location> locations;
+    public static HashMap<Integer, Location> locations = new HashMap<>();
+
     static {
-        /* TODO
+        /*
          * create a FileLogger object
          */
         FileLogger fileLogger = new FileLogger();
 
-        /* TODO
+        /*
          * create a ConsoleLogger object
          */
         ConsoleLogger consoleLogger = new ConsoleLogger();
@@ -28,10 +29,38 @@ public class LocationMap implements Map<Integer, Location> {
          * extract the location and the description on each line
          * print all locations and descriptions to both console and file
          * check the ExpectedOutput files
-         * put each location in the locations HashMap using temporary empty hashmaps for exits
+         * put each location in the locations HashMap using temporary empty hashmaps for exits ???
          */
 
-        /**TODO
+        try(FileReader fileReader = new FileReader(LOCATIONS_FILE_NAME);
+            BufferedReader bufferedReader = new BufferedReader(fileReader)
+        ) {
+            String temp = "Available locations:" + System.lineSeparator();
+            fileLogger.log(temp);
+            consoleLogger.log(temp);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                StringBuilder sb = new StringBuilder();
+                String[] lineArray = line.split(",");
+                sb.append(lineArray[0]);
+                sb.append(": ");
+                sb.append(lineArray[1]);
+
+                for (int i = 2; i < lineArray.length ; i++) {
+                    sb.append(",");
+                    sb.append(lineArray[i]);
+                }
+                HashMap<String, Integer> tempExitsMap = new HashMap<>();
+                Location tempLoc = new Location((Integer.parseInt(lineArray[0])), sb.toString(), tempExitsMap);
+                sb.append(System.lineSeparator());
+                fileLogger.log(sb.toString());
+                consoleLogger.log(sb.toString());
+                locations.put((Integer.parseInt(lineArray[0])), tempLoc);
+            }
+        }catch (Exception e){
+        }
+
+        /* TODO
          * Read from DIRECTIONS_FILE_NAME so that a user can move from A to B, i.e. current location to next location
          * use try-with-resources/catch block for the FileReader
          * extract the 3 elements  on each line: location, direction, destination
@@ -39,10 +68,44 @@ public class LocationMap implements Map<Integer, Location> {
          * check the ExpectedOutput files
          * for each location, create a new location object and add its exit
          */
+        try(FileReader fileReader = new FileReader(DIRECTIONS_FILE_NAME);
+            BufferedReader bufferedReader = new BufferedReader(fileReader)
+        ) {
+            int lineCounter = 0;
+            String line;
+            String temp = "Available directions:" + System.lineSeparator();
+            fileLogger.log(temp);
+            consoleLogger.log(temp);
+            while ((line = bufferedReader.readLine()) != null) {
+                StringBuilder sb = new StringBuilder();
+                String[] lineArray = line.split(",");
+                sb.append(lineArray[0]);
+                sb.append(": ");
+                sb.append(lineArray[1]);
+                sb.append(": ");
+                sb.append(lineArray[2]);
+                /*
+                [0] = current location
+                [1] = direction
+                [2] = destination
+                 */
+                sb.append(System.lineSeparator());
+                fileLogger.log(sb.toString());
+                consoleLogger.log(sb.toString());
+                HashMap<String, Integer> tempExitsMap = new HashMap<>();
+                tempExitsMap.put(lineArray[1], Integer.parseInt(lineArray[2]));
+                Location tempLoc = new Location((Integer.parseInt(lineArray[0])), ((lineArray[1])), tempExitsMap);
+                locations.put(lineCounter, tempLoc);
+                lineCounter++;
+            }
+
+        }catch (Exception e){
+
+        }
 
     }
 
-    /**TODO
+    /** TODO
      * implement all methods for Map
      * @return
      */
