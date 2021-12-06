@@ -33,28 +33,33 @@ public class Mapping {
          * complete the vocabulary HashMap <Key, Value> with all directions.
          * use the directions.txt file and crosscheck with the ExpectedInput and ExpectedOutput files to find the keys and the values
          */
-        vocab.put("SW", "SW");
-        vocab.put("SOUTHWEST", "SW");
-        vocab.put("Q", "Q");
-        vocab.put("QUIT", "Q");
-        vocab.put("U", "U");
-        vocab.put("UP", "U");
-        vocab.put("D", "D");
-        vocab.put("DOWN", "D");
-        vocab.put("N", "N");
+
         vocab.put("NORTH", "N");
-        vocab.put("S", "S");
+        vocab.put("N", "N");
         vocab.put("SOUTH", "S");
-        vocab.put("E", "E");
-        vocab.put("EAST", "E");
-        vocab.put("W", "W");
+        vocab.put("S", "S");
         vocab.put("WEST", "W");
-        vocab.put("NE", "NE");
+        vocab.put("W", "W");
+        vocab.put("EAST", "E");
+        vocab.put("E", "E");
+
+        vocab.put("DOWN", "D");
+        vocab.put("D", "D");
+        vocab.put("UP", "U");
+        vocab.put("U", "U");
+
+        vocab.put("QUIT", "Q");
+        vocab.put("Q", "Q");
+
         vocab.put("NORTHEAST", "NE");
-        vocab.put("SE", "SE");
-        vocab.put("SOUTHEAST", "SE");
-        vocab.put("NW", "NW");
+        vocab.put("NE", "NE");
         vocab.put("NORTHWEST", "NW");
+        vocab.put("NW", "NW");
+        vocab.put("SOUTHEAST", "SE");
+        vocab.put("SE", "SE");
+        vocab.put("SOUTHWEST", "SW");
+        vocab.put("SW", "SW");
+
     }
 
     public void mapping() {
@@ -107,7 +112,7 @@ public class Mapping {
              * input a direction
              * ensure that the input is converted to uppercase
              */
-            String userInput = sc.nextLine().toUpperCase();
+            String userInput = sc.nextLine().toUpperCase().trim();
 
             /* TODO
              * are we dealing with a letter / word for the direction to go to?
@@ -118,24 +123,43 @@ public class Mapping {
              * if multiple viable directions are specified in the input, choose the last one
              */
             boolean validDirection = false;
+            String[] userInputArray = userInput.split(" ");
             String direction = "";
-            if ((userInput.length() == 1 || userInput.length() == 2) && (exits.get(userInput) != null)){ //if the input is just a letter
-                validDirection = true;
-                direction = vocab.get(userInput);
-            }else if (userInput.length() == 4 || userInput.length() == 5 || userInput.length() == 9){/*if the input is 4, 5 or 9 chars i.e.
-                it's just the direction*/
-                if (vocab.get(userInput) != null){
+
+            for (int i = (userInputArray.length - 1); i >= 0; i--) {
+                if ((vocab.get(userInputArray[i]) != null) && (userInputArray[i].length() != 1) &&
+                        ((userInputArray[i].length() != 2) || (userInputArray[i].equalsIgnoreCase("UP")))){
                     validDirection = true;
-                    direction = vocab.get(userInput);
-                }
-            }else { //if the input is a string of words containing the key
-                String[] userInputArray = userInput.split(" ");
-                for (String s : userInputArray) {
-                    if (vocab.get(s) != null) {
-                        direction = vocab.get(s);
-                    }
+                    direction = vocab.get(userInputArray[i]);
+                    break;
+                }else if ((vocab.get(userInputArray[i]) != null) && (userInputArray[i].length() == 1 || userInputArray[i].length() == 2)
+                        && (userInputArray.length==1)){
+                    validDirection = true;
+                    direction = vocab.get(userInputArray[i]);
+                    break;
+                }else if ((userInputArray[i].length() == 4 || userInputArray[i].length() == 5 || userInputArray[i].length() == 9)
+                        && !(vocab.get(userInputArray[i]) == null)&& (userInputArray.length==1)){
+                    validDirection = true;
+                    direction = vocab.get(userInputArray[i]);
+                    break;
                 }
             }
+
+//            if ((userInput.length() == 1 || userInput.length() == 2) && (exits.get(userInput) != null)){ //if the input is just a letter
+//                validDirection = true;
+//                direction = vocab.get(userInput);
+//            }else if ((userInput.length() == 4 || userInput.length() == 5 || userInput.length() == 9) && !(vocab.get(userInput) == null)){/*if the input is 4, 5 or 9 chars i.e.
+//                it's just the direction*/
+//                validDirection = true;
+//                direction = vocab.get(userInput);
+//            }else { //if the input is a string of words containing the key
+//                for (String s : userInputArray) {
+//                    if (vocab.get(s) != null) {
+//                        direction = vocab.get(s);
+//                        validDirection = true;
+//                    }
+//                }
+//            }
 
 
             /* TODO
@@ -143,7 +167,7 @@ public class Mapping {
              * otherwise print an error message (to both console and file)
              * check the ExpectedOutput files
              */
-            if (!validDirection){
+            if (!validDirection || (locationMap.get(location)).getExits().get(direction) == null){
                 String errorMessage = "You cannot go in that direction";
                 fileLogger.log(errorMessage);
                 fileLogger.log(System.lineSeparator());
@@ -154,7 +178,8 @@ public class Mapping {
             }
 
         }
-        System.out.println(locationMap.get(0).getDescription());
+        fileLogger.log((locationMap.get(0).getDescription()) + System.lineSeparator());
+        consoleLogger.log((locationMap.get(0).getDescription()) + System.lineSeparator());
     }
 
     public static void main(String[] args) {
@@ -166,5 +191,4 @@ public class Mapping {
         Mapping mapping = new Mapping();
         mapping.mapping();
     }
-
 }
