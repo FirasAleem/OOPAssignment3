@@ -75,7 +75,7 @@ public class Mapping {
         int location = INITIAL_LOCATION;
         while (location!=0) { //originally was while(true)
 
-            /* TODO
+            /*
              * get the location and print its description to both console and file
              * use the FileLogger and ConsoleLogger objects
              */
@@ -88,11 +88,11 @@ public class Mapping {
              * verify if the location is exit ??
              */
 
-            /* TODO
+            /*
              * get a map of the exits for the location
              */
             Map<String, Integer> exits = (locationMap.get(location)).getExits();
-            /* TODO
+            /*
              * print the available exits (to both console and file)
              * crosscheck with the ExpectedOutput files
              * Hint: you can use a StringBuilder to append the exits
@@ -108,13 +108,13 @@ public class Mapping {
             consoleLogger.log(exitString.toString());
 
 
-            /* TODO
+            /*
              * input a direction
              * ensure that the input is converted to uppercase
              */
             String userInput = sc.nextLine().toUpperCase().trim();
 
-            /* TODO
+            /*
              * are we dealing with a letter / word for the direction to go to?
              * available inputs are: a letter(the HashMap value), a word (the HashMap key), a string of words that contains the key
              * crosscheck with the ExpectedInput and ExpectedOutput files for examples of inputs
@@ -145,24 +145,7 @@ public class Mapping {
                 }
             }
 
-//            if ((userInput.length() == 1 || userInput.length() == 2) && (exits.get(userInput) != null)){ //if the input is just a letter
-//                validDirection = true;
-//                direction = vocab.get(userInput);
-//            }else if ((userInput.length() == 4 || userInput.length() == 5 || userInput.length() == 9) && !(vocab.get(userInput) == null)){/*if the input is 4, 5 or 9 chars i.e.
-//                it's just the direction*/
-//                validDirection = true;
-//                direction = vocab.get(userInput);
-//            }else { //if the input is a string of words containing the key
-//                for (String s : userInputArray) {
-//                    if (vocab.get(s) != null) {
-//                        direction = vocab.get(s);
-//                        validDirection = true;
-//                    }
-//                }
-//            }
-
-
-            /* TODO
+            /*
              * if user can go in that direction, then set the location to that direction
              * otherwise print an error message (to both console and file)
              * check the ExpectedOutput files
@@ -183,7 +166,7 @@ public class Mapping {
     }
 
     public static void main(String[] args) {
-        /* TODO
+        /*
          * run the program from here
          * create a Mapping object
          * start the game

@@ -23,7 +23,7 @@ public class LocationMap implements Map<Integer, Location> {
          */
         ConsoleLogger consoleLogger = new ConsoleLogger();
 
-        /* TODO
+        /*
          * Read from LOCATIONS_FILE_NAME so that a user can navigate from one location to another
          * use try-with-resources/catch block for the FileReader
          * extract the location and the description on each line
@@ -69,7 +69,7 @@ public class LocationMap implements Map<Integer, Location> {
         }catch (Exception e){
         }
 
-        /* TODO
+        /*
          * Read from DIRECTIONS_FILE_NAME so that a user can move from A to B, i.e. current location to next location
          * use try-with-resources/catch block for the FileReader
          * extract the 3 elements  on each line: location, direction, destination
@@ -129,105 +129,69 @@ public class LocationMap implements Map<Integer, Location> {
 
     }
 
-    /** TODO
+    /**
      * implement all methods for Map
      * @return
      */
     @Override
     public int size() {
-        //TODO
         return locations.size();
     }
 
     @Override
     public boolean isEmpty() {
-        //TODO
         return locations.isEmpty();
     }
 
     @Override
     public boolean containsKey(Object key) {
-        //TODO
         return locations.containsKey(key);
     }
 
     @Override
     public boolean containsValue(Object value) {
-        //TODO
         return locations.containsValue(value);
     }
 
     @Override
     public Location get(Object key) {
-        //TODO
         return locations.get(key);
     }
 
     @Override
     public Location put(Integer key, Location value) {
-        //TODO
-        return null;
+        return locations.put(key, value);
     }
 
     @Override
     public Location remove(Object key) {
-        //TODO
-        Location deleted = locations.get((Integer) key);
-        locations.remove(key);
-        return deleted;
+        //Location deleted = locations.get((Integer) key);
+        //locations.remove(key);
+        return locations.remove(key);
     }
 
     @Override
     public void putAll(Map<? extends Integer, ? extends Location> m) {
-        //TODO
         locations.putAll(m);
     }
 
     @Override
     public void clear() {
-        //TODO
         locations.clear();
     }
 
     @Override
     public Set<Integer> keySet() {
-        //TODO
         return locations.keySet();
     }
 
     @Override
     public Collection<Location> values() {
-        //TODO
         return locations.values();
     }
 
     @Override
     public Set<Entry<Integer, Location>> entrySet() {
-        //TODO
-        /*try(FileReader fileReader = new FileReader(LOCATIONS_FILE_NAME);
-            BufferedReader bufferedReader = new BufferedReader(fileReader)
-        ) {
-            Set<Entry<Integer, Location>> entries = null;
-            String line;
-            Location please = new Location(0, null, null);
-            int count = 0;
-            while ((line = bufferedReader.readLine()) != null) {
-                count++;
-            }
-            for (int i = 0; i < count; i++) {
-                please = this.get(i);
-            }
-            for(Entry<Integer, Location> entry : entries){
-                Integer key = entry.getKey();
-                Location value = entry.getValue();
-                System.out.printf("key: %d, value: %s %n", key, value);
-            }
-            System.out.println();
-            return entries;
-
-        }catch (Exception e){
-
-        }*/
         return locations.entrySet();
     }
 }
