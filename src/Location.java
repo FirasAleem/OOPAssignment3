@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Location {
@@ -24,7 +24,7 @@ public class Location {
          * otherwise, set the exit HashMap to (Q,0)
          */
         if (exits.isEmpty()){
-            this.exits = new HashMap<>();
+            this.exits = new LinkedHashMap<>();
             this.exits.put("Q", 0);
         }else {
             this.exits = exits;

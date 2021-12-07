@@ -689,17 +689,17 @@ You cannot go in that direction
 YOU ARE AT ONE END OF AN IMMENSE NORTH/SOUTH PASSAGE.
 Available exits are Q, S, W, 
 YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, U, E, NE, W, NW, N, 
+Available exits are Q, S, SW, NE, SE, U, NW, E, W, N, D, 
 YOU ARE IN A LITTLE MAZE OF TWISTY PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, U, E, W, NE, NW, N, 
+Available exits are Q, NW, U, N, S, W, SW, NE, E, D, SE, 
 YOU ARE IN A LITTLE TWISTY MAZE OF PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, U, E, NE, W, NW, N, 
+Available exits are Q, SE, NE, S, D, U, NW, N, SW, E, W, 
 YOU ARE IN A TWISTY LITTLE MAZE OF PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, E, U, W, NE, NW, N, 
+Available exits are Q, N, SE, D, S, E, W, SW, NE, NW, U, 
 YOU ARE IN A MAZE OF LITTLE TWISTY PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, E, U, W, NE, NW, N, 
+Available exits are Q, SW, NW, E, W, N, D, SE, U, S, NE, 
 YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, U, E, NE, W, NW, N, 
+Available exits are Q, S, SW, NE, SE, U, NW, E, W, N, D, 
 YOU ARE IN A MAZE OF TWISTING LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, U, E, W, NE, NW, N, 
+Available exits are Q, W, SE, NW, SW, NE, U, D, N, S, E, 
 YOU ARE SITTING IN FRONT OF A COMPUTER LEARNING JAVA.

@@ -57,7 +57,7 @@ public class LocationMap implements Map<Integer, Location> {
                     newSB.append(",");
                     newSB.append(lineArray[i]);
                 }
-                HashMap<String, Integer> tempExitsMap = new HashMap<>();
+                LinkedHashMap<String, Integer> tempExitsMap = new LinkedHashMap<>();
                 Location tempLoc = new Location((Integer.parseInt(lineArray[0])), newSB.toString(), tempExitsMap);
                 locations.put((Integer.parseInt(lineArray[0])), tempLoc); //locations hashmap has 141 entries, each with a location.
                 // Each of the 141 Locations contain ID (0-141), description of the places and an empty hashmap for exits
@@ -86,7 +86,7 @@ public class LocationMap implements Map<Integer, Location> {
             consoleLogger.log(temp);
 
             while ((line = bufferedReader2.readLine()) != null) {
-                HashMap<String, Integer> exits;
+                LinkedHashMap<String, Integer> exits;
                 StringBuilder sb = new StringBuilder();
                 String[] lineArray = line.split(",");
                 sb.append(lineArray[0]);
@@ -108,7 +108,7 @@ public class LocationMap implements Map<Integer, Location> {
                         Location locationToBeEdited = locations.get(i);
                         int locationIDToBeEdited = locationToBeEdited.getLocationId();
                         String descriptionToBeEdited = locationToBeEdited.getDescription();
-                        exits = (HashMap<String, Integer>) locationToBeEdited.getExits();
+                        exits = (LinkedHashMap<String, Integer>) locationToBeEdited.getExits();
                         exits.put(lineArray[1], Integer.parseInt(lineArray[2])); //can i use addExits?
                         Location newLocation = new Location(locationIDToBeEdited, descriptionToBeEdited, exits);
                         locations.put(i, newLocation);

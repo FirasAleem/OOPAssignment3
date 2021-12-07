@@ -686,21 +686,21 @@ Available exits are Q, S, W,
 YOU ARE AT ONE END OF AN IMMENSE NORTH/SOUTH PASSAGE.
 Available exits are Q, S, W, 
 YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, U, E, NE, W, NW, N, 
+Available exits are Q, S, SW, NE, SE, U, NW, E, W, N, D, 
 YOU ARE IN A TWISTING LITTLE MAZE OF PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, E, U, NE, W, NW, N, 
+Available exits are Q, NE, N, NW, SE, E, D, S, U, W, SW, 
 YOU ARE IN A LITTLE MAZE OF TWISTING PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, E, U, NE, W, NW, N, 
+Available exits are Q, SW, N, E, NW, SE, NE, W, D, U, S, 
 YOU ARE IN A TWISTY MAZE OF LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, E, U, W, NE, NW, N, 
+Available exits are Q, E, W, U, SW, D, S, NW, SE, NE, N, 
 YOU ARE IN A LITTLE TWISTY MAZE OF PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, U, E, NE, W, NW, N, 
+Available exits are Q, SE, NE, S, D, U, NW, N, SW, E, W, 
 YOU ARE IN A TWISTING LITTLE MAZE OF PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, E, U, NE, W, NW, N, 
+Available exits are Q, NE, N, NW, SE, E, D, S, U, W, SW, 
 YOU ARE IN A TWISTY MAZE OF LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, E, U, W, NE, NW, N, 
+Available exits are Q, E, W, U, SW, D, S, NW, SE, NE, N, 
 YOU ARE IN A LITTLE MAZE OF TWISTING PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, SW, D, E, U, NE, W, NW, N, 
+Available exits are Q, SW, N, E, NW, SE, NE, W, D, U, S, 
 YOU ARE IN A TWISTING MAZE OF LITTLE PASSAGES, ALL DIFFERENT.
-Available exits are Q, SE, S, D, SW, U, E, W, NE, NW, N, 
+Available exits are Q, U, D, W, NE, SW, E, N, NW, SE, S, 
 YOU ARE SITTING IN FRONT OF A COMPUTER LEARNING JAVA.
