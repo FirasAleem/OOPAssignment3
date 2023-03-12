@@ -31,7 +31,6 @@ public class LocationMap implements Map<Integer, Location> {
          * check the ExpectedOutput files
          * put each location in the locations HashMap using temporary empty hashmaps for exits ???
          */
-        int locationsFileLines = 0;
         ArrayList<Integer> locationsFileLinesArray = new ArrayList<>();
 
         try (FileReader fileReader = new FileReader(LOCATIONS_FILE_NAME);
@@ -65,7 +64,6 @@ public class LocationMap implements Map<Integer, Location> {
                 sb.append(System.lineSeparator());
                 fileLogger.log(sb.toString());
                 consoleLogger.log(sb.toString());
-                locationsFileLines++;
                 boolean addedToArray = false;
                 for (Integer integer : locationsFileLinesArray) {
                     if (integer.equals(Integer.parseInt(lineArray[0]))) {

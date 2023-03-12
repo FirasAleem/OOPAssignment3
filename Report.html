@@ -1,0 +1,3554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Firas - Assignment 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            padding-top: 10px;
+            padding-left: 25px;
+            /*background-color: #1c1c1c;*/
+        }
+        pre {
+            background-color: #363636;
+            color: #c7c7c7;
+            border-radius: 10px;
+        }
+        pre span {
+            color: #f0960e;
+        }
+        table td, table td * {
+            vertical-align: top;
+            horizontal-align: left;
+            padding-right: 40px;
+        }
+        #correct {
+            font-size: 15px;
+            color: green;
+        }
+        #incorrect {
+            font-size: 15px;
+            color:  red;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<h1 class="display-4">Assignment 3</h1>
+<h2>Version 3.0 (NCR)</h2>
+<h2>Student: Firas A</h2><h3>Total mark: 100/100</h3><div class="d-flex align-items-start"><div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical"><button class="nav-link active" id="v-pills-ovv-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ovv" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Overview</button><button class="nav-link" id="v-pills-subsum-tab" data-bs-toggle="pill" data-bs-target="#v-pills-subsum" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Submission Summary</button><button class="nav-link" id="v-pills-compreport-tab" data-bs-toggle="pill" data-bs-target="#v-pills-compreport" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Compiler Report</button><button class="nav-link" id="v-pills-q1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 1</button><button class="nav-link" id="v-pills-q2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q2" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 2</button><button class="nav-link" id="v-pills-q3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q3" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 3</button><button class="nav-link" id="v-pills-q4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q4" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 4</button><button class="nav-link" id="v-pills-q5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q5" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 5</button></div><div class="tab-content" id="v-pills-tabContent"><div class="tab-pane fade show active" id="v-pills-ovv" role="tabpanel" aria-labelledby="v-pills-ovv-tab"><h3>Overview</h3><p>Question 1 - Marks: 5/5</p><p>Question 2 - Marks: 25/25</p><p>Question 3 - Marks: 30/30</p><p>Question 4 - Marks: 15/15</p><p>Question 5 - Marks: 25/25</p></div><div class="tab-pane fade" id="v-pills-subsum" role="tabpanel" aria-labelledby="v-pills-subsum-tab"><h3>Submission Summary</h3><pre>Firas/Solution
+
+├── Assignment213.iml
+
+├── directions.txt
+
+├── expectedOutputs
+
+│   ├── 000ExpectedOutput.txt
+
+│   ├── 001ExpectedOutput.txt
+
+│   ├── 002ExpectedOutput.txt
+
+│   ├── 003ExpectedOutput.txt
+
+│   ├── 004ExpectedOutput.txt
+
+│   └── 005ExpectedOutput.txt
+
+├── locations.txt
+
+├── src
+
+│   ├── ConsoleLogger.java
+
+│   ├── FileLogger.java
+
+│   ├── Location.java
+
+│   ├── LocationMap.java
+
+│   ├── Logger.java
+
+│   └── Mapping.java
+
+├── StudentConsoleOutput.txt
+
+├── StudentFileOutput.txt
+
+└── testInputs
+
+    ├── 000TestInput.txt
+
+    ├── 001TestInput.txt
+
+    ├── 002TestInput.txt
+
+    ├── 003TestInput.txt
+
+    ├── 004TestInput.txt
+
+    └── 005TestInput.txt
+
+
+
+3 directories, 23 files
+
+</pre><br><p>Submission structure looks correct!</p></div><div class="tab-pane fade" id="v-pills-compreport" role="tabpanel" aria-labelledby="v-pills-compreport-tab"><h3>Compiler report</h3><pre>No compile issues!</pre><br></div><div class="tab-pane fade" id="v-pills-q1" role="tabpanel" aria-labelledby="v-pills-q1-tab"><h3>Question 1 - Marks: 5/5</h3><h4>Test 000</h4><p>Input data:<pre>q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q2" role="tabpanel" aria-labelledby="v-pills-q2-tab"><h3>Question 2 - Marks: 25/25</h3><h4>Test 100</h4><p>Input data:<pre>q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr><h4>Test 101</h4><p>Input data:<pre>s
+e
+d
+u
+n
+w
+se
+nw
+sw
+ne
+q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-EIGHT¶
+138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+139 : LOCATION•NINETY-NINE¶
+140 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+141 : LOCATION•EIGHTEEN¶
+142 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+143 : LOCATION•NINETY-NINE¶
+144 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+145 : LOCATION•NINETY-SIX¶
+146 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+147 : LOCATION•NINETY-FIVE¶
+148 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+149 : LOCATION•NINETY-NINE¶
+150 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+151 : LOCATION•NINETY-FIVE¶
+152 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+153 : LOCATION•NINETY-SEVEN¶
+154 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+155 : LOCATION•NINETY-FIVE¶
+156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+157 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-EIGHT¶
+eq 138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 139 : LOCATION•NINETY-NINE¶
+eq 140 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 141 : LOCATION•EIGHTEEN¶
+eq 142 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+eq 143 : LOCATION•NINETY-NINE¶
+eq 144 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 145 : LOCATION•NINETY-SIX¶
+eq 146 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 147 : LOCATION•NINETY-FIVE¶
+eq 148 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 149 : LOCATION•NINETY-NINE¶
+eq 150 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 151 : LOCATION•NINETY-FIVE¶
+eq 152 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 153 : LOCATION•NINETY-SEVEN¶
+eq 154 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+eq 155 : LOCATION•NINETY-FIVE¶
+eq 156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 157 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr><h4>Test 102</h4><p>Input data:<pre>southeast
+northwest
+southwest
+northeast
+south
+west
+down
+north
+east
+up
+quit
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-NINE¶
+138 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+139 : LOCATION•NINETY-FIVE¶
+140 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+141 : LOCATION•NINETY-SEVEN¶
+142 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+143 : LOCATION•NINETY-FIVE¶
+144 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+145 : LOCATION•NINETY-EIGHT¶
+146 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+147 : LOCATION•NINETY-SEVEN¶
+148 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+149 : LOCATION•SIXTEEN¶
+150 : Available•exits•are•Q,•N,•E,•NE,•U,•¶
+151 : LOCATION•THIRTEEN¶
+152 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+153 : LOCATION•FOURTEEN¶
+154 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+155 : LOCATION•NINETY-FIVE¶
+156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+157 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-NINE¶
+eq 138 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 139 : LOCATION•NINETY-FIVE¶
+eq 140 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 141 : LOCATION•NINETY-SEVEN¶
+eq 142 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+eq 143 : LOCATION•NINETY-FIVE¶
+eq 144 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 145 : LOCATION•NINETY-EIGHT¶
+eq 146 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 147 : LOCATION•NINETY-SEVEN¶
+eq 148 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+eq 149 : LOCATION•SIXTEEN¶
+eq 150 : Available•exits•are•Q,•N,•E,•NE,•U,•¶
+eq 151 : LOCATION•THIRTEEN¶
+eq 152 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+eq 153 : LOCATION•FOURTEEN¶
+eq 154 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+eq 155 : LOCATION•NINETY-FIVE¶
+eq 156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 157 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr><h4>Test 103</h4><p>Input data:<pre>I wish to go north
+go east
+now I would like to go southwest
+climb up
+climb down
+w
+southeast is the way to go
+wrong, go back, northwest
+I want to go northeast this time
+last try, go south
+I give up, quit
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-TWO¶
+138 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+139 : LOCATION•NINETY-THREE¶
+140 : Available•exits•are•Q,•W,•S,•SW,•D,•¶
+141 : LOCATION•NINETY-FIVE¶
+142 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+143 : LOCATION•ONE•HUNDRED¶
+144 : Available•exits•are•Q,•D,•¶
+145 : LOCATION•NINETY-FIVE¶
+146 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+147 : LOCATION•NINETY-FOUR¶
+148 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+149 : LOCATION•NINETY-EIGHT¶
+150 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+151 : LOCATION•NINETY-FOUR¶
+152 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+153 : LOCATION•NINETY-TWO¶
+154 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+155 : LOCATION•NINETY-FIVE¶
+156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+157 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-TWO¶
+eq 138 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+eq 139 : LOCATION•NINETY-THREE¶
+eq 140 : Available•exits•are•Q,•W,•S,•SW,•D,•¶
+eq 141 : LOCATION•NINETY-FIVE¶
+eq 142 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 143 : LOCATION•ONE•HUNDRED¶
+eq 144 : Available•exits•are•Q,•D,•¶
+eq 145 : LOCATION•NINETY-FIVE¶
+eq 146 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 147 : LOCATION•NINETY-FOUR¶
+eq 148 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+eq 149 : LOCATION•NINETY-EIGHT¶
+eq 150 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 151 : LOCATION•NINETY-FOUR¶
+eq 152 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+eq 153 : LOCATION•NINETY-TWO¶
+eq 154 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+eq 155 : LOCATION•NINETY-FIVE¶
+eq 156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 157 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr><h4>Test 104</h4><p>Input data:<pre>I don't know where to start
+go east
+location 2 please
+3
+sorry, go s
+s
+I want to go east
+go north, no, better go west
+I'm not getting anywhere
+I want to quit this game
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : You•cannot•go•in•that•direction¶
+138 : LOCATION•NINETY-FIVE¶
+139 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+140 : LOCATION•NINETY-SIX¶
+141 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+142 : You•cannot•go•in•that•direction¶
+143 : LOCATION•NINETY-SIX¶
+144 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+145 : You•cannot•go•in•that•direction¶
+146 : LOCATION•NINETY-SIX¶
+147 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+148 : You•cannot•go•in•that•direction¶
+149 : LOCATION•NINETY-SIX¶
+150 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+151 : LOCATION•NINETY-NINE¶
+152 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+153 : You•cannot•go•in•that•direction¶
+154 : LOCATION•NINETY-NINE¶
+155 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+156 : LOCATION•NINETY-EIGHT¶
+157 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+158 : You•cannot•go•in•that•direction¶
+159 : LOCATION•NINETY-EIGHT¶
+160 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+161 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : You•cannot•go•in•that•direction¶
+eq 138 : LOCATION•NINETY-FIVE¶
+eq 139 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 140 : LOCATION•NINETY-SIX¶
+eq 141 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 142 : You•cannot•go•in•that•direction¶
+eq 143 : LOCATION•NINETY-SIX¶
+eq 144 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 145 : You•cannot•go•in•that•direction¶
+eq 146 : LOCATION•NINETY-SIX¶
+eq 147 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 148 : You•cannot•go•in•that•direction¶
+eq 149 : LOCATION•NINETY-SIX¶
+eq 150 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 151 : LOCATION•NINETY-NINE¶
+eq 152 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 153 : You•cannot•go•in•that•direction¶
+eq 154 : LOCATION•NINETY-NINE¶
+eq 155 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 156 : LOCATION•NINETY-EIGHT¶
+eq 157 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 158 : You•cannot•go•in•that•direction¶
+eq 159 : LOCATION•NINETY-EIGHT¶
+eq 160 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 161 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q3" role="tabpanel" aria-labelledby="v-pills-q3-tab"><h3>Question 3 - Marks: 30/30</h3><h4>Test 200</h4><p>Input data:<pre>s
+q
+
+</pre></p><p><p>Output file <code>StudentFileOutput_200.txt</code> matches console output - &#10003</p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-EIGHT¶
+138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+139 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-EIGHT¶
+eq 138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 139 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 15.00/15.00</p></td></tr></table><hr><h4>Test 201</h4><p>Input data:<pre>Have you deleted the previous file?
+quit
+
+</pre></p><p><p>Output file <code>StudentFileOutput_201.txt</code> matches console output - &#10003</p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : You•cannot•go•in•that•direction¶
+138 : LOCATION•NINETY-FIVE¶
+139 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+140 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : You•cannot•go•in•that•direction¶
+eq 138 : LOCATION•NINETY-FIVE¶
+eq 139 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 140 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 15.00/15.00</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q4" role="tabpanel" aria-labelledby="v-pills-q4-tab"><h3>Question 4 - Marks: 15/15</h3><h4>Test 300</h4><p>Input data:<pre>q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00/5.00</p></td></tr></table><hr><h4>Test 301</h4><p>Input data:<pre>s
+e
+n
+n
+sw
+u
+d
+d
+ne
+w
+se
+sw
+nw
+ne
+s
+u
+q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-EIGHT¶
+138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+139 : LOCATION•NINETY-NINE¶
+140 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+141 : LOCATION•NINETY-SIX¶
+142 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+143 : LOCATION•NINETY-THREE¶
+144 : Available•exits•are•Q,•W,•S,•SW,•D,•¶
+145 : LOCATION•NINETY-FIVE¶
+146 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+147 : LOCATION•ONE•HUNDRED¶
+148 : Available•exits•are•Q,•D,•¶
+149 : LOCATION•NINETY-FIVE¶
+150 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+151 : LOCATION•FOURTEEN¶
+152 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+153 : LOCATION•TWELVE¶
+154 : Available•exits•are•Q,•W,•S,•SW,•U,•¶
+155 : LOCATION•ELEVEN¶
+156 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+157 : LOCATION•FIFTEEN¶
+158 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+159 : LOCATION•SEVENTEEN¶
+160 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+161 : LOCATION•THIRTEEN¶
+162 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+163 : LOCATION•ELEVEN¶
+164 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+165 : LOCATION•FOURTEEN¶
+166 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+167 : LOCATION•NINETY-FIVE¶
+168 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+169 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-EIGHT¶
+eq 138 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 139 : LOCATION•NINETY-NINE¶
+eq 140 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 141 : LOCATION•NINETY-SIX¶
+eq 142 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 143 : LOCATION•NINETY-THREE¶
+eq 144 : Available•exits•are•Q,•W,•S,•SW,•D,•¶
+eq 145 : LOCATION•NINETY-FIVE¶
+eq 146 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 147 : LOCATION•ONE•HUNDRED¶
+eq 148 : Available•exits•are•Q,•D,•¶
+eq 149 : LOCATION•NINETY-FIVE¶
+eq 150 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 151 : LOCATION•FOURTEEN¶
+eq 152 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+eq 153 : LOCATION•TWELVE¶
+eq 154 : Available•exits•are•Q,•W,•S,•SW,•U,•¶
+eq 155 : LOCATION•ELEVEN¶
+eq 156 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+eq 157 : LOCATION•FIFTEEN¶
+eq 158 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 159 : LOCATION•SEVENTEEN¶
+eq 160 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 161 : LOCATION•THIRTEEN¶
+eq 162 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+eq 163 : LOCATION•ELEVEN¶
+eq 164 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+eq 165 : LOCATION•FOURTEEN¶
+eq 166 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+eq 167 : LOCATION•NINETY-FIVE¶
+eq 168 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 169 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 9.99/9.99</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q5" role="tabpanel" aria-labelledby="v-pills-q5-tab"><h3>Question 5 - Marks: 25/25</h3><h4>Test 400</h4><p>Input data:<pre>west
+north
+east
+south
+up
+down
+east
+s
+w
+n
+d
+se
+w
+nw
+se
+e
+nw
+w
+s
+u
+east
+east
+d
+q
+
+</pre></p><p></p><p>Note that spaces have been replaced with • and newlines are represented as ¶</p><table><tr><td><p>Program output: <br><pre>001 : Available•locations:¶
+002 : 0:•EXIT¶
+003 : 10:•LOCATION•TEN¶
+004 : 11:•LOCATION•ELEVEN¶
+005 : 12:•LOCATION•TWELVE¶
+006 : 13:•LOCATION•THIRTEEN¶
+007 : 14:•LOCATION•FOURTEEN¶
+008 : 15:•LOCATION•FIFTEEN¶
+009 : 16:•LOCATION•SIXTEEN¶
+010 : 17:•LOCATION•SEVENTEEN¶
+011 : 18:•LOCATION•EIGHTEEN¶
+012 : 91:•LOCATION•NINETY-ONE¶
+013 : 92:•LOCATION•NINETY-TWO¶
+014 : 93:•LOCATION•NINETY-THREE¶
+015 : 94:•LOCATION•NINETY-FOUR¶
+016 : 95:•LOCATION•NINETY-FIVE¶
+017 : 96:•LOCATION•NINETY-SIX¶
+018 : 97:•LOCATION•NINETY-SEVEN¶
+019 : 98:•LOCATION•NINETY-EIGHT¶
+020 : 99:•LOCATION•NINETY-NINE¶
+021 : 100:•LOCATION•ONE•HUNDRED¶
+022 : Available•directions:¶
+023 : 0:•Q:•0¶
+024 : 91:•Q:•0¶
+025 : 91:•S:•94¶
+026 : 91:•E:•92¶
+027 : 91:•SE:•95¶
+028 : 91:•D:•10¶
+029 : 92:•Q:•0¶
+030 : 92:•W:•91¶
+031 : 92:•E:•93¶
+032 : 92:•S:•95¶
+033 : 92:•SW:•94¶
+034 : 92:•SE:•96¶
+035 : 93:•Q:•0¶
+036 : 93:•W:•92¶
+037 : 93:•S:•96¶
+038 : 93:•SW:•95¶
+039 : 93:•D:•12¶
+040 : 94:•Q:•0¶
+041 : 94:•S:•97¶
+042 : 94:•E:•95¶
+043 : 94:•SE:•98¶
+044 : 94:•NE:•92¶
+045 : 94:•N:•91¶
+046 : 95:•Q:•0¶
+047 : 95:•N:•92¶
+048 : 95:•S:•98¶
+049 : 95:•E:•96¶
+050 : 95:•W:•94¶
+051 : 95:•NW:•91¶
+052 : 95:•NE:•93¶
+053 : 95:•SW:•97¶
+054 : 95:•SE:•99¶
+055 : 95:•D:•14¶
+056 : 95:•U:•100¶
+057 : 96:•Q:•0¶
+058 : 96:•N:•93¶
+059 : 96:•S:•99¶
+060 : 96:•W:•95¶
+061 : 96:•NW:•92¶
+062 : 96:•SW:•98¶
+063 : 97:•Q:•0¶
+064 : 97:•N:•94¶
+065 : 97:•E:•98¶
+066 : 97:•NE:•95¶
+067 : 97:•D:•16¶
+068 : 98:•Q:•0¶
+069 : 98:•N:•95¶
+070 : 98:•W:•97¶
+071 : 98:•E:•99¶
+072 : 98:•NW:•94¶
+073 : 98:•NE:•96¶
+074 : 99:•Q:•0¶
+075 : 99:•N:•96¶
+076 : 99:•W:•98¶
+077 : 99:•NW:•95¶
+078 : 99:•D:•18¶
+079 : 10:•Q:•0¶
+080 : 10:•E:•11¶
+081 : 10:•S:•13¶
+082 : 10:•SE:•14¶
+083 : 10:•U:•91¶
+084 : 11:•Q:•0¶
+085 : 11:•W:•10¶
+086 : 11:•E:•12¶
+087 : 11:•S:•14¶
+088 : 11:•SW:•13¶
+089 : 11:•SE:•15¶
+090 : 12:•Q:•0¶
+091 : 12:•W:•11¶
+092 : 12:•S:•15¶
+093 : 12:•SW:•14¶
+094 : 12:•U:•93¶
+095 : 13:•Q:•0¶
+096 : 13:•N:•10¶
+097 : 13:•S:•16¶
+098 : 13:•E:•14¶
+099 : 13:•NE:•11¶
+100 : 13:•SE:•17¶
+101 : 14:•Q:•0¶
+102 : 14:•N:•11¶
+103 : 14:•S:•17¶
+104 : 14:•E:•15¶
+105 : 14:•W:•13¶
+106 : 14:•NW:•10¶
+107 : 14:•NE:•12¶
+108 : 14:•SW:•16¶
+109 : 14:•SE:•18¶
+110 : 14:•U:•95¶
+111 : 15:•Q:•0¶
+112 : 15:•N:•12¶
+113 : 15:•S:•18¶
+114 : 15:•W:•14¶
+115 : 15:•NW:•11¶
+116 : 15:•SW:•17¶
+117 : 16:•Q:•0¶
+118 : 16:•N:•13¶
+119 : 16:•E:•17¶
+120 : 16:•NE:•14¶
+121 : 16:•U:•97¶
+122 : 17:•Q:•0¶
+123 : 17:•N:•14¶
+124 : 17:•W:•16¶
+125 : 17:•E:•18¶
+126 : 17:•NW:•13¶
+127 : 17:•NE:•15¶
+128 : 18:•Q:•0¶
+129 : 18:•N:•15¶
+130 : 18:•W:•17¶
+131 : 18:•NW:•14¶
+132 : 18:•U:•99¶
+133 : 100:•Q:•0¶
+134 : 100:•D:•95¶
+135 : LOCATION•NINETY-FIVE¶
+136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+137 : LOCATION•NINETY-FOUR¶
+138 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+139 : LOCATION•NINETY-ONE¶
+140 : Available•exits•are•Q,•S,•E,•SE,•D,•¶
+141 : LOCATION•NINETY-TWO¶
+142 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+143 : LOCATION•NINETY-FIVE¶
+144 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+145 : LOCATION•ONE•HUNDRED¶
+146 : Available•exits•are•Q,•D,•¶
+147 : LOCATION•NINETY-FIVE¶
+148 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+149 : LOCATION•NINETY-SIX¶
+150 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+151 : LOCATION•NINETY-NINE¶
+152 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+153 : LOCATION•NINETY-EIGHT¶
+154 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+155 : LOCATION•NINETY-FIVE¶
+156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+157 : LOCATION•FOURTEEN¶
+158 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+159 : LOCATION•EIGHTEEN¶
+160 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+161 : LOCATION•SEVENTEEN¶
+162 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+163 : LOCATION•THIRTEEN¶
+164 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+165 : LOCATION•SEVENTEEN¶
+166 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+167 : LOCATION•EIGHTEEN¶
+168 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+169 : LOCATION•FOURTEEN¶
+170 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+171 : LOCATION•THIRTEEN¶
+172 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+173 : LOCATION•SIXTEEN¶
+174 : Available•exits•are•Q,•N,•E,•NE,•U,•¶
+175 : LOCATION•NINETY-SEVEN¶
+176 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+177 : LOCATION•NINETY-EIGHT¶
+178 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+179 : LOCATION•NINETY-NINE¶
+180 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+181 : LOCATION•EIGHTEEN¶
+182 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+183 : EXIT¶
+</pre></p></td><td><p>Expected output:<br><pre>eq 001 : Available•locations:¶
+eq 002 : 0:•EXIT¶
+eq 003 : 10:•LOCATION•TEN¶
+eq 004 : 11:•LOCATION•ELEVEN¶
+eq 005 : 12:•LOCATION•TWELVE¶
+eq 006 : 13:•LOCATION•THIRTEEN¶
+eq 007 : 14:•LOCATION•FOURTEEN¶
+eq 008 : 15:•LOCATION•FIFTEEN¶
+eq 009 : 16:•LOCATION•SIXTEEN¶
+eq 010 : 17:•LOCATION•SEVENTEEN¶
+eq 011 : 18:•LOCATION•EIGHTEEN¶
+eq 012 : 91:•LOCATION•NINETY-ONE¶
+eq 013 : 92:•LOCATION•NINETY-TWO¶
+eq 014 : 93:•LOCATION•NINETY-THREE¶
+eq 015 : 94:•LOCATION•NINETY-FOUR¶
+eq 016 : 95:•LOCATION•NINETY-FIVE¶
+eq 017 : 96:•LOCATION•NINETY-SIX¶
+eq 018 : 97:•LOCATION•NINETY-SEVEN¶
+eq 019 : 98:•LOCATION•NINETY-EIGHT¶
+eq 020 : 99:•LOCATION•NINETY-NINE¶
+eq 021 : 100:•LOCATION•ONE•HUNDRED¶
+eq 022 : Available•directions:¶
+eq 023 : 0:•Q:•0¶
+eq 024 : 91:•Q:•0¶
+eq 025 : 91:•S:•94¶
+eq 026 : 91:•E:•92¶
+eq 027 : 91:•SE:•95¶
+eq 028 : 91:•D:•10¶
+eq 029 : 92:•Q:•0¶
+eq 030 : 92:•W:•91¶
+eq 031 : 92:•E:•93¶
+eq 032 : 92:•S:•95¶
+eq 033 : 92:•SW:•94¶
+eq 034 : 92:•SE:•96¶
+eq 035 : 93:•Q:•0¶
+eq 036 : 93:•W:•92¶
+eq 037 : 93:•S:•96¶
+eq 038 : 93:•SW:•95¶
+eq 039 : 93:•D:•12¶
+eq 040 : 94:•Q:•0¶
+eq 041 : 94:•S:•97¶
+eq 042 : 94:•E:•95¶
+eq 043 : 94:•SE:•98¶
+eq 044 : 94:•NE:•92¶
+eq 045 : 94:•N:•91¶
+eq 046 : 95:•Q:•0¶
+eq 047 : 95:•N:•92¶
+eq 048 : 95:•S:•98¶
+eq 049 : 95:•E:•96¶
+eq 050 : 95:•W:•94¶
+eq 051 : 95:•NW:•91¶
+eq 052 : 95:•NE:•93¶
+eq 053 : 95:•SW:•97¶
+eq 054 : 95:•SE:•99¶
+eq 055 : 95:•D:•14¶
+eq 056 : 95:•U:•100¶
+eq 057 : 96:•Q:•0¶
+eq 058 : 96:•N:•93¶
+eq 059 : 96:•S:•99¶
+eq 060 : 96:•W:•95¶
+eq 061 : 96:•NW:•92¶
+eq 062 : 96:•SW:•98¶
+eq 063 : 97:•Q:•0¶
+eq 064 : 97:•N:•94¶
+eq 065 : 97:•E:•98¶
+eq 066 : 97:•NE:•95¶
+eq 067 : 97:•D:•16¶
+eq 068 : 98:•Q:•0¶
+eq 069 : 98:•N:•95¶
+eq 070 : 98:•W:•97¶
+eq 071 : 98:•E:•99¶
+eq 072 : 98:•NW:•94¶
+eq 073 : 98:•NE:•96¶
+eq 074 : 99:•Q:•0¶
+eq 075 : 99:•N:•96¶
+eq 076 : 99:•W:•98¶
+eq 077 : 99:•NW:•95¶
+eq 078 : 99:•D:•18¶
+eq 079 : 10:•Q:•0¶
+eq 080 : 10:•E:•11¶
+eq 081 : 10:•S:•13¶
+eq 082 : 10:•SE:•14¶
+eq 083 : 10:•U:•91¶
+eq 084 : 11:•Q:•0¶
+eq 085 : 11:•W:•10¶
+eq 086 : 11:•E:•12¶
+eq 087 : 11:•S:•14¶
+eq 088 : 11:•SW:•13¶
+eq 089 : 11:•SE:•15¶
+eq 090 : 12:•Q:•0¶
+eq 091 : 12:•W:•11¶
+eq 092 : 12:•S:•15¶
+eq 093 : 12:•SW:•14¶
+eq 094 : 12:•U:•93¶
+eq 095 : 13:•Q:•0¶
+eq 096 : 13:•N:•10¶
+eq 097 : 13:•S:•16¶
+eq 098 : 13:•E:•14¶
+eq 099 : 13:•NE:•11¶
+eq 100 : 13:•SE:•17¶
+eq 101 : 14:•Q:•0¶
+eq 102 : 14:•N:•11¶
+eq 103 : 14:•S:•17¶
+eq 104 : 14:•E:•15¶
+eq 105 : 14:•W:•13¶
+eq 106 : 14:•NW:•10¶
+eq 107 : 14:•NE:•12¶
+eq 108 : 14:•SW:•16¶
+eq 109 : 14:•SE:•18¶
+eq 110 : 14:•U:•95¶
+eq 111 : 15:•Q:•0¶
+eq 112 : 15:•N:•12¶
+eq 113 : 15:•S:•18¶
+eq 114 : 15:•W:•14¶
+eq 115 : 15:•NW:•11¶
+eq 116 : 15:•SW:•17¶
+eq 117 : 16:•Q:•0¶
+eq 118 : 16:•N:•13¶
+eq 119 : 16:•E:•17¶
+eq 120 : 16:•NE:•14¶
+eq 121 : 16:•U:•97¶
+eq 122 : 17:•Q:•0¶
+eq 123 : 17:•N:•14¶
+eq 124 : 17:•W:•16¶
+eq 125 : 17:•E:•18¶
+eq 126 : 17:•NW:•13¶
+eq 127 : 17:•NE:•15¶
+eq 128 : 18:•Q:•0¶
+eq 129 : 18:•N:•15¶
+eq 130 : 18:•W:•17¶
+eq 131 : 18:•NW:•14¶
+eq 132 : 18:•U:•99¶
+eq 133 : 100:•Q:•0¶
+eq 134 : 100:•D:•95¶
+eq 135 : LOCATION•NINETY-FIVE¶
+eq 136 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 137 : LOCATION•NINETY-FOUR¶
+eq 138 : Available•exits•are•Q,•S,•E,•SE,•NE,•N,•¶
+eq 139 : LOCATION•NINETY-ONE¶
+eq 140 : Available•exits•are•Q,•S,•E,•SE,•D,•¶
+eq 141 : LOCATION•NINETY-TWO¶
+eq 142 : Available•exits•are•Q,•W,•E,•S,•SW,•SE,•¶
+eq 143 : LOCATION•NINETY-FIVE¶
+eq 144 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 145 : LOCATION•ONE•HUNDRED¶
+eq 146 : Available•exits•are•Q,•D,•¶
+eq 147 : LOCATION•NINETY-FIVE¶
+eq 148 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 149 : LOCATION•NINETY-SIX¶
+eq 150 : Available•exits•are•Q,•N,•S,•W,•NW,•SW,•¶
+eq 151 : LOCATION•NINETY-NINE¶
+eq 152 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 153 : LOCATION•NINETY-EIGHT¶
+eq 154 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 155 : LOCATION•NINETY-FIVE¶
+eq 156 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•D,•U,•¶
+eq 157 : LOCATION•FOURTEEN¶
+eq 158 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+eq 159 : LOCATION•EIGHTEEN¶
+eq 160 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+eq 161 : LOCATION•SEVENTEEN¶
+eq 162 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 163 : LOCATION•THIRTEEN¶
+eq 164 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+eq 165 : LOCATION•SEVENTEEN¶
+eq 166 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 167 : LOCATION•EIGHTEEN¶
+eq 168 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+eq 169 : LOCATION•FOURTEEN¶
+eq 170 : Available•exits•are•Q,•N,•S,•E,•W,•NW,•NE,•SW,•SE,•U,•¶
+eq 171 : LOCATION•THIRTEEN¶
+eq 172 : Available•exits•are•Q,•N,•S,•E,•NE,•SE,•¶
+eq 173 : LOCATION•SIXTEEN¶
+eq 174 : Available•exits•are•Q,•N,•E,•NE,•U,•¶
+eq 175 : LOCATION•NINETY-SEVEN¶
+eq 176 : Available•exits•are•Q,•N,•E,•NE,•D,•¶
+eq 177 : LOCATION•NINETY-EIGHT¶
+eq 178 : Available•exits•are•Q,•N,•W,•E,•NW,•NE,•¶
+eq 179 : LOCATION•NINETY-NINE¶
+eq 180 : Available•exits•are•Q,•N,•W,•NW,•D,•¶
+eq 181 : LOCATION•EIGHTEEN¶
+eq 182 : Available•exits•are•Q,•N,•W,•NW,•U,•¶
+eq 183 : EXIT¶
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 25.00/25.00</p></td></tr></table><hr></div></div></body></html>
